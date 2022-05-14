@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+=============
+variables
+=============
+*/
+
+:root {
+  /* primary colors */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* neutral colors */
+  --vdblue-mainBG: hsl(217, 54%, 11%);
+  --vdblue-cardBG: hsl(216, 50%, 16%);
+  --vdblue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --ff: "Outfit", san-serrif;
+  --fs: 16px;
+}
+
+/*
+================
+global element
+================
+*/
+body {
+  background-color: var(--vdblue-mainBG);
+  font-size: 18px;
+  font-family: var(--ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+footer {
+  color: var(--soft-blue);
+  margin-top: 1rem;
+}
+
+/*
+================
+global classes
+================
+*/
+
+.container {
+  background-color: var(--vdblue-cardBG);
+  max-width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 20px rgb(0 0 0 / 20%);
+}
+
+.img-container {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.img-container img {
+  width: 310px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.img-container div {
+  position: absolute;
+  top: 0;
+  margin-top: 1.5rem;
+  background-color: hsl(178, 100%, 50%, 45%);
+  height: 300px;
+  width: 310px;
+  z-index: 999;
+  border-radius: 8px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-container div:hover {
+  opacity: 1;
+}
+
+.img-container div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
+  width: 35px;
+}
+
+.text {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.text a {
+  color: var(--white);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.text a:hover {
+  color: var(--cyan);
+}
+
+.text > p {
+  color: hsl(215, 32%, 60%);
+  font-size: 1.01rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.price-days {
+  display: flex;
+  font-size: 1rem;
+}
+
+.price {
+  margin-right: 6rem;
+  color: var(--cyan);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eth-logo {
+  margin-right: 0.4rem;
+}
+
+.days-left {
+  color: hsl(215, 32%, 45%);
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days-left > img {
+  margin-right: 0.4rem;
+}
+
+.line {
+  margin-top: 1.7rem;
+  margin-bottom: 1rem;
+  border-top: 0.15rem solid hsl(215, 32%, 25%);
+}
+
+.creator {
+  margin-top: 1.4rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.creator img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  border: 0.1rem solid var(--white);
+  border-radius: 50%;
+}
+
+.creator p {
+  display: inline;
+  color: var(--soft-blue);
+  font-size: 0.9rem;
+}
+
+.creator a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.creator a:hover {
+  color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
